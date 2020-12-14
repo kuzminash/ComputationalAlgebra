@@ -13,5 +13,5 @@ object Context {
 
 fun main() {
     println(FindAlphaForFirstGraph().invokeTask(2, 4))
-    println(FindAlphaForSecondGraph().invokeTask(8, 15))
+    println(FindAlphaForSecondGraph().invokeTask(8 ,11))
 }

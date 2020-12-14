@@ -38,7 +38,8 @@ class FindAlphaForFirstGraph {
         val (values, Q) = ShiftsAnd3DiagAlgoToGainSpecter().Solve(G, 0.00001, allowedTime)
         val sortedValues = values.sortedByDescending { it.real }
 
-        return sortedValues[1].real.max(sortedValues.last().real) / (BigDecimal(8.0).setScale(
+        return sortedValues[1].real.abs(Context.mathContext)
+            .max(sortedValues.last().real.abs(Context.mathContext)) / (BigDecimal(8.0).setScale(
             Context.SCALE,
             RoundingMode.HALF_UP
         ))
